@@ -1,39 +1,4 @@
-#2.圆盘找数
-
-##题目描述
-如图找出3个连续数（紧挨着的3个数），它们相加和最大，再找出和数最小的3个数，试编一程序求之。
-![圆盘找数](http://202.121.199.212/JudgeOnline/upload/201306/QQ%E6%88%AA%E5%9B%BE20130618235339.png)
-
-##输入
-输入的第一行有一个整数n，表示测试数据的组数。接下来有n行，每行有若干个整数a1，a2，…,am,（-10000≤a1，a2，…, am ≤ 10000），他们表示一个圆盘上的m个数，（m≤1000）。
-
-输入直到文件输入结束。
-
-##输出
-对输入中每一行表示的圆盘，在一行上先输出“Case #:”，其中“#”是测试数据的行编号（从1开始），接着在下面的一行上分别输出这三个相邻数字之和中最大和与最小和，以及取得最大和与最小和对应的那三个相邻数字的第一个数的下标MaxIndex与MinIndex。注：数的下标约定从1开始编起。
-
-假如这些数不到3个，那么就无法按圆盘方式计算，此时输出“No maximal and minimal!”
-
-##样例输入
-
-```
-2
-20 1 8 4 13 6 10 15 2 17 3 19 7 16 8 11 14 9 12 5
-1 -2
-```
-
-##样例输出
-
-```
-Case 1:
-maximum = 42, minimum = 13, MaxIndex = 12, MinIndex = 2
-Case 2:
-No maximal and minimal!
-```
-
-##源代码（C语言）
-```
-//Programmed by Daphne 2015.7.7
+//Programmed by Daphne 2015.7.2
 //E-mail: Daphne.Chang@foxmail.com
 #include <stdio.h>
 
@@ -51,11 +16,7 @@ int main()
             n++;
             if(getchar()=='\n') break;
         }
-    /*  for(int i=0;i<n;i++)
-        {
-            printf("%d ",a[i]);
-        }
-        printf("\n");*/
+
         printf("Case %d:\n",count++);
         if(n<3)
         {
@@ -106,4 +67,3 @@ int main()
     }
     return 0;
 }
-```
